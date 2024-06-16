@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-Jokes-3b2f8f0f-d991-41a9-a87e-6fba49799698</UserSecretsId>
+    <Target><Name="VercelBuild" AfterTargets="Build"></Target>
+  <Exec Command="dotnet publish -c Release -o .vercel_build_output" />
   </PropertyGroup>
 
   <ItemGroup>
