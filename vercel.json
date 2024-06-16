@@ -1,16 +1,10 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "Jokes.csproj",
-        "use": "@vercel/dotnet"
-      }
+      { "src": "out/*", "use": "@vercel/static" }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "api"
-      }
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
   
